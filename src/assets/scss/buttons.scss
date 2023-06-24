@@ -1,0 +1,64 @@
+@import "base.scss";
+
+@mixin btns($cl: $col1, $tx: $col2, $sh: $col1) {
+    color: $tx;
+    background-color: $cl;
+    padding: 5px 20px;
+    margin: 1px;
+    border: thin solid darken($cl, 10);
+    text-shadow: 1px 1px 1px $sh;
+    box-shadow: 1px 1px 10px $cl;
+    transition: background 0.5s ease-in-out;
+    &:hover {
+        color: $tx;
+        background-color: darken($color: $cl, $amount: 10);
+        border: thin solid darken($cl, 20);
+        text-shadow: 1px 1px 1px $sh;
+    }
+    &:active { background-color: darken($color: $cl, $amount: 10) !important; 
+        color: $tx !important;
+    border: thin solid darken($cl, 30) !important; }
+    &:focus { background: darken($cl, 20); color: $tx; }
+}
+
+.btn1 {  @include btns($col1, $col2, #0006); }
+.btn2 {  @include btns($col2, $col1, #FFFA); }
+.btn3 {  @include btns($col3, $col1, #FFFA); }
+.btn4 {  @include btns($col4, $col1, #FFFA); }
+.btn5 {  @include btns($col5, $col2, #0006); }
+.btn6 {  @include btns($col6, $col2, #0006); }
+.btn7 {  @include btns($col7, $col1, #FFFA); }
+.btn8 {  @include btns($col8, $col2, #0006); }
+.btn9 {  @include btns($col9, $col2, #0006); }
+.btn10 {  @include btns($col10, $col1, #FFFA); }
+
+
+
+@mixin btnos($cl: $col1, $tx: $col2, $sh: $col1) {
+    padding: 5px 20px;
+    margin: 1px;
+    border: thin solid darken($cl, 10);
+    box-shadow: 1px 1px 20px rgba($cl, 40%);
+    transition: background 0.5s ease-in-out;
+    &:hover {
+        color: $tx;
+        background-color: $cl;
+        border: thin solid darken($cl, 20);
+        text-shadow: 1px 1px 1px $sh;
+    }
+    &:active { background-color: $cl !important; 
+        color: $tx !important;
+    border: thin solid darken($cl, 30) !important; }
+    &:focus { background: $cl; color: $tx; }
+}
+
+.btno1 {  @include btnos($col1, $col2, #0006); }
+.btno2 {  @include btnos($col2, $col1, #FFFA); }
+.btno3 {  @include btnos($col3, $col1, #FFFA); }
+.btno4 {  @include btnos($col4, $col1, #FFFA); }
+.btno5 {  @include btnos($col5, $col2, #0006); }
+.btno6 {  @include btnos($col6, $col2, #0006); }
+.btno7 {  @include btnos($col7, $col1, #FFFA); }
+.btno8 {  @include btnos($col8, $col2, #0006); }
+.btno9 {  @include btnos($col9, $col2, #0006); }
+.btno10 {  @include btnos($col10, $col1, #FFFA); }

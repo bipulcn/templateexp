@@ -1,0 +1,55 @@
+@import 'base.scss';
+
+@mixin cardBas ($cl: $col2, $tx: $col1) {
+    background-color: rgba($cl, 50%);
+    color: $tx;
+    box-shadow: 5px 5px 20px rgba(darken($cl, 50), 50%);
+    // border: 2px dotted lighten($cl, 20);
+    
+}
+
+@mixin dash ($cl: $col2) {outline: 2px dashed darken(rgba($cl, 50%), 10);
+    outline-offset: -8px;
+&:before {
+    content:"";
+    top:0px;
+    left:0px;
+    right:1px;
+    bottom:1px;
+    outline: 2px dashed lighten($cl, 40);
+    outline-offset: -8px;
+    position: absolute;
+}}
+
+
+.card1 { @include cardBas($col1, $col2); @include dash($col1); }
+.card2 { @include cardBas($col2, $col1); }
+.card3 { @include cardBas($col3, $col1); }
+.card4 { @include cardBas($col4, $col1); }
+.card5 { @include cardBas($col5, $col1); }
+.card6 { @include cardBas($col6, $col2); }
+.card7 { @include cardBas($col7, $col1); }
+.card8 { @include cardBas($col8, $col2); }
+.card9 { @include cardBas($col9, $col1); }
+.card10 { @include cardBas($col10, $col1); }
+
+@mixin icardBas ($cl: $col2, $tx: $col1) {
+    background-color: $cl;
+    color: $tx;
+    overflow: hidden;
+    box-shadow: 0px 0px 20px rgba(darken($cl, 50), 50%);
+    background-size: cover;
+    * { backdrop-filter: blur(5px); }
+}
+
+
+.icard1 { @include icardBas($col1, $col2); }
+.icard2 { @include icardBas($col2, $col1); }
+.icard3 { @include icardBas($col3, $col1); }
+.icard4 { @include icardBas($col4, $col1); }
+.icard5 { @include icardBas($col5, $col1); }
+.icard6 { @include icardBas($col6, $col2); }
+.icard7 { @include icardBas($col7, $col1); }
+.icard8 { @include icardBas($col8, $col2); }
+.icard9 { @include icardBas($col9, white); }
+.icard10 { @include icardBas($col10, $col1); }

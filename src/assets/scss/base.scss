@@ -1,0 +1,51 @@
+$col1: #7B6151ff;
+$col2: #F6F1EBff;
+$col3: #EBCB9Fff;
+$col4: #D6BAA1ff;
+$col5: #E0A67Dff;
+
+$col6: #859766ff;
+$col7: #E2C09Bff;
+$col8: #B8451Dff;
+$col9: #FFA187ff;
+$col10: #DBCFC0ff;
+
+.bgx1::before { content: " "; width: inherit; height: inherit; position : absolute; }
+
+.bg1 { background-color: $col1; border: thin solid darken($col1, 10); color: $col1; }
+.bg2 { background-color: $col2; border: thin solid darken($col2, 10); }
+.bg3 { background-color: $col3; border: thin solid darken($col3, 10); }
+.bg4 { background-color: $col4; border: thin solid darken($col4, 10); }
+.bg5 { background-color: $col5; border: thin solid darken($col5, 10); }
+.bg6 { background-color: $col6; border: thin solid darken($col6, 10); color: white; }
+.bg7 { background-color: $col7; border: thin solid darken($col7, 10); }
+.bg8 { background-color: $col8; border: thin solid darken($col8, 10); color: $col1; }
+.bg9 { background-color: $col9; border: thin solid darken($col9, 10); }
+.bg10 { background-color: $col10; border: thin solid darken($col10, 10); }
+.hbg1:hover { background-color: darken($col1, 10); color: $col2; }
+.hbg2:hover { background-color: darken($col2, 10); }
+.hbg3:hover { background-color: darken($col3, 10); }
+.hbg4:hover { background-color: darken($col4, 10); }
+.hbg5:hover { background-color: darken($col5, 10); }
+.hbg6:hover { background-color: darken($col6, 10); }
+.hbg7:hover { background-color: darken($col7, 10); }
+.hbg8:hover { background-color: darken($col8, 10); }
+.hbg9:hover { background-color: darken($col9, 10); }
+.hbg10:hover { background-color: darken($col10, 10); }
+
+.tx1 { color: $col1; }
+.tx2 { color: $col2; }
+.tx3 { color: $col3; }
+.tx4 { color: $col4; }
+.tx5 { color: $col5; }
+.tx6 { color: $col6; }
+.tx7 { color: $col7; }
+.tx8 { color: $col8; }
+.tx9 { color: $col9; }
+.tx10 { color: $col10; }
+
+
+
+body {
+    
+}
