@@ -9,6 +9,9 @@ import './assets/scss/base.scss';
 import './assets/scss/buttons.scss';
 import './assets/scss/text.scss';
 import './assets/scss/cards.scss';
+import './assets/scss/forms.scss';
+import './assets/scss/navbar.scss';
+import './assets/scss/alert.scss';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

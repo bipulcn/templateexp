@@ -1,0 +1,27 @@
+@import "base.scss";
+
+.fgroup {
+    margin: 10px 0;
+    label { display: block; padding: 5px 10px; text-transform: uppercase; font-size: 80%; font-weight: 900; color: #0008; }
+    input { width: 100%; padding: 5px 10px; border: thin solid #ccc; border-radius: 5px; margin: 0 -1px; color: #000D;
+        &:focus-visible { outline: none; box-shadow: 0 0 10px #59DA; }
+        &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+            color: #0004; font-weight: 900;
+          } }
+    small { padding: 5px 10px; display: block; }
+    .text-muted { color: #0006 !important; }
+}
+
+.fcheck {
+    padding: 5px 10px;
+    margin: 10px 0;
+    label { padding: 0 10px; text-transform: uppercase; font-size: 80%; font-weight: 900; color: #0008; }
+}
+
+@mixin bdr ($cl: $clr1) { border-color: rgba($cl, 30%); box-shadow: 0 0 20px rgba($cl, 30%); }
+
+.br1 { @include bdr($clr1); }
+.br2 { @include bdr($clr2); }
+.br3 { @include bdr($clr3); }
+.br4 { @include bdr($clr4); }
+.br5 { @include bdr($clr5); }

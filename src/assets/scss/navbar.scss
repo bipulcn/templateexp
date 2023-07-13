@@ -1,0 +1,14 @@
+@import "base.scss";
+
+#dark {
+  .navbar {
+    background: rgba($wht, 90%);
+    .nav-link, .navbar-brand { color: $blk; }
+  }
+}
+#light {
+  .navbar {
+    background: rgba($bgs, 90%);
+    .nav-link, .navbar-brand { color: $wht; &:hover { background: rgba($bgs, 20%);} }
+  }
+}

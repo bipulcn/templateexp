@@ -1,64 +1,103 @@
 @import "base.scss";
 
-@mixin btns($cl: $col1, $tx: $col2, $sh: $col1) {
-    color: $tx;
-    background-color: $cl;
-    padding: 5px 20px;
-    margin: 1px;
-    border: thin solid darken($cl, 10);
-    text-shadow: 1px 1px 1px $sh;
-    box-shadow: 1px 1px 10px $cl;
-    transition: background 0.5s ease-in-out;
-    &:hover {
-        color: $tx;
-        background-color: darken($color: $cl, $amount: 10);
-        border: thin solid darken($cl, 20);
-        text-shadow: 1px 1px 1px $sh;
-    }
-    &:active { background-color: darken($color: $cl, $amount: 10) !important; 
-        color: $tx !important;
-    border: thin solid darken($cl, 30) !important; }
-    &:focus { background: darken($cl, 20); color: $tx; }
+
+.rbtn { border-radius: 20px; }
+@mixin bbse($cl, $sh) {
+  margin: 1px;
+  border: thin solid darken($cl, 10);
+  transition: background 0.5s ease-in-out;
+  &:hover {
+      text-shadow: 1px 1px 1px $sh;
+      border: thin solid darken($cl, 20);
+  }
+  &:active { border: thin solid darken($cl, 30) !important; }
 }
 
-.btn1 {  @include btns($col1, $col2, #0006); }
-.btn2 {  @include btns($col2, $col1, #FFFA); }
-.btn3 {  @include btns($col3, $col1, #FFFA); }
-.btn4 {  @include btns($col4, $col1, #FFFA); }
-.btn5 {  @include btns($col5, $col2, #0006); }
-.btn6 {  @include btns($col6, $col2, #0006); }
-.btn7 {  @include btns($col7, $col1, #FFFA); }
-.btn8 {  @include btns($col8, $col2, #0006); }
-.btn9 {  @include btns($col9, $col2, #0006); }
-.btn10 {  @include btns($col10, $col1, #FFFA); }
-
-
-
-@mixin btnos($cl: $col1, $tx: $col2, $sh: $col1) {
-    padding: 5px 20px;
-    margin: 1px;
-    border: thin solid darken($cl, 10);
-    box-shadow: 1px 1px 20px rgba($cl, 40%);
-    transition: background 0.5s ease-in-out;
-    &:hover {
-        color: $tx;
-        background-color: $cl;
-        border: thin solid darken($cl, 20);
-        text-shadow: 1px 1px 1px $sh;
-    }
-    &:active { background-color: $cl !important; 
-        color: $tx !important;
-    border: thin solid darken($cl, 30) !important; }
-    &:focus { background: $cl; color: $tx; }
+@mixin cpro($cl: $clr1, $tx: $clr2, $sh: $clr1) {
+  @include bbse($cl, $sh);
+  text-shadow: 1px 1px 1px $sh;
+  box-shadow: 1px 1px 10px $cl;
+  color: $tx;
+  &:hover { background: linear-gradient(to left top, darken($cl, 10), darken($cl, 15)); color:$tx; }
+  &:active { background: linear-gradient(to left top, darken($cl, 10), darken($cl, 5)) !important; color: $tx !important; }
+  &:focus { background: dlinear-gradient(to left top, darken($cl, 10), darken($cl, 5)); color: $tx !important; }
+}
+@mixin cproout($cl: $clr1, $tx: $clr2, $sh: $clr1) {
+  @include bbse($cl, $sh);
+  text-shadow: 1px 1px 1px $sh;
+  box-shadow: 1px 1px 10px $cl;
+  color: $tx;
+  &:hover { background: linear-gradient(to left top, rgba($cl, 80%), rgba($cl, 90%)); }
+  &:active { background: linear-gradient(to left top, rgba($cl, 80%), rgba($cl, 80%)) !important; color: $tx !important; }
+  &:focus { background: dlinear-gradient(to left top, rgba($cl, 80%), rgba($cl, 80%)); color: $tx !important; }
 }
 
-.btno1 {  @include btnos($col1, $col2, #0006); }
-.btno2 {  @include btnos($col2, $col1, #FFFA); }
-.btno3 {  @include btnos($col3, $col1, #FFFA); }
-.btno4 {  @include btnos($col4, $col1, #FFFA); }
-.btno5 {  @include btnos($col5, $col2, #0006); }
-.btno6 {  @include btnos($col6, $col2, #0006); }
-.btno7 {  @include btnos($col7, $col1, #FFFA); }
-.btno8 {  @include btnos($col8, $col2, #0006); }
-.btno9 {  @include btnos($col9, $col2, #0006); }
-.btno10 {  @include btnos($col10, $col1, #FFFA); }
+@mixin btns($cl: $clr1, $tx: $clr2, $sh: $clr1) {
+  background: linear-gradient(to left top, $cl, darken($cl, 5));
+  @include cpro($cl, $tx, $sh);
+  padding: 5px 30px;
+}
+
+@mixin btno($cl: $clr1, $tx: $clr2, $sh: $clr1) {
+  background: linear-gradient(to left top, rgba($cl, 0%), rgba($cl, 0%));
+  @include cproout($cl, $tx, $sh);
+}
+
+@mixin btnol($cl: $clr1, $tx: $clr2, $sh: $clr1) {
+  border: thin solid $cl;
+  @include bbse($cl, $sh);
+  padding: 5px 30px;
+}
+
+@mixin sqare($cl: $clr1, $tx: $wht) {
+  @include cpro($cl, $tx, rgba($cl, 50%));
+  background: linear-gradient(to left top, $cl, darken($cl, 5));
+  padding: 5px 12px;
+}
+@mixin sqareOut($cl: $clr1, $tx: $wht) {
+  @include cproout($cl, $tx, rgba($cl, 50%));
+  background: linear-gradient(to left top, rgba($cl, 0%), rgba($cl, 5%));
+  color: $tx;
+  padding: 5px 12px;
+}
+
+
+.btn1 {  @include btns($clr1, $wht, $blk); }
+.btn2 {  @include btns($clr2, $wht, $blk); }
+.btn3 {  @include btns($clr3, $wht, $blk); }
+.btn4 {  @include btns($clr4, $wht, $blk); }
+.btn5 {  @include btns($clr5, $wht, $blk); }
+
+
+.btno1 {  @include btnol($clr1, $wht, $blk); }
+.btno2 {  @include btnol($clr2, $wht, $blk); }
+.btno3 {  @include btnol($clr3, $wht, $blk); }
+.btno4 {  @include btnol($clr4, $wht, $blk); }
+.btno5 {  @include btnol($clr5, $wht, $blk); }
+
+#dark, .dark { .btno1 { color: $wht; } .btno2 { color: $wht; } .btno3 { color: $wht; } .btno4 { color: $wht; } .btno5 { color: $wht; } }
+
+#light, .light {
+  .btns1 { @include sqare($clr1); }
+  .btns2 { @include sqare($clr2); }
+  .btns3 { @include sqare($clr3); }
+  .btns4 { @include sqare($clr4); }
+  .btns5 { @include sqare($clr5); }
+  .btnso1 { @include sqareOut($clr1); }
+  .btnso2 { @include sqareOut($clr2); }
+  .btnso3 { @include sqareOut($clr3); }
+  .btnso4 { @include sqareOut($clr4); }
+  .btnso5 { @include sqareOut($clr5); }
+}
+#dark, .dark {
+  .btns1 { @include sqare($clr1); }
+  .btns2 { @include sqare($clr2); }
+  .btns3 { @include sqare($clr3); }
+  .btns4 { @include sqare($clr4); }
+  .btns5 { @include sqare($clr5); }
+  .btnso1 { @include sqareOut($clr1); }
+  .btnso2 { @include sqareOut($clr2); }
+  .btnso3 { @include sqareOut($clr3); }
+  .btnso4 { @include sqareOut($clr4); }
+  .btnso5 { @include sqareOut($clr5); }
+}

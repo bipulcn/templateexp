@@ -11,68 +11,71 @@ const CardPage = () => {
                 <h1>Card Page</h1>
             </div>
 
-            <div className="col-12 col-sm-6 col-md-4 mt-3">
-                <div className="card card1"><div className="card-body">
+            <div className="col-12 col-sm-6 col-md-5 p-5 dark">
+                <div className="card crd1 my-5"><div className="card-body">
                         <h3>{txt[0]}</h3><p>{txt[2]}</p>
                 </div></div>
-            </div>
-            <div className="col-12 col-sm-6 col-md-4 mt-3">
-                <div className="card card2"><div className="card-body">
+                <div className="card card1 my-5"><div className="card-body">
                         <h3>{txt[0]}</h3><p>{txt[2]}</p>
                 </div></div>
-            </div>
-            <div className="col-12 col-sm-6 col-md-4 mt-3">
-                <div className="card card3"><div className="card-body">
+                <div className="card card2 my-5"><div className="card-body">
                         <h3>{txt[0]}</h3><p>{txt[2]}</p>
                 </div></div>
-            </div>
-            <div className="col-12 col-sm-6 col-md-4 mt-3">
-                <div className="card card4"><div className="card-body">
+                <div className="card card3 my-5"><div className="card-body">
                         <h3>{txt[0]}</h3><p>{txt[2]}</p>
                 </div></div>
-            </div>
-            <div className="col-12 col-sm-6 col-md-4 mt-3">
-                <div className="card card5"><div className="card-body">
+                <div className="card card4 my-5"><div className="card-body">
                         <h3>{txt[0]}</h3><p>{txt[2]}</p>
                 </div></div>
-            </div>
-            <div className="col-12 col-sm-6 col-md-4 mt-3">
-                <div className="card card6"><div className="card-body">
+                <div className="card card5 my-5"><div className="card-body">
                         <h3>{txt[0]}</h3><p>{txt[2]}</p>
                 </div></div>
-            </div>
-            <div className="col-12 col-sm-6 col-md-4 mt-3">
-                <div className="card card7"><div className="card-body">
+                <div className="card icard1 my-5"><img src={img1} className="card-img-top" alt="A Beautiful flower image" /><div className="card-body">
                         <h3>{txt[0]}</h3><p>{txt[2]}</p>
                 </div></div>
-            </div>
-            <div className="col-12 col-sm-6 col-md-4 mt-3">
-                <div className="card card8"><div className="card-body">
+                <div className="card icard2 my-5"><img src={img3} className="card-img-end" alt="A Beautiful flower image" /><div className="card-body">
                         <h3>{txt[0]}</h3><p>{txt[2]}</p>
                 </div></div>
-            </div>
-            <div className="col-12 col-sm-6 col-md-4 mt-3">
-                <div className="card card9"><div className="card-body">
-                        <h3>{txt[0]}</h3><p>{txt[2]}</p>
-                </div></div>
-            </div>
-            <div className="col-12 col-sm-6 col-md-4 mt-3">
-                <div className="card icard1"><img src={img1} className="card-img-top" alt="A Beautiful flower image" /><div className="card-body">
-                        <h3>{txt[0]}</h3><p>{txt[2]}</p>
-                </div></div>
-            </div>
-            <div className="col-12 col-sm-6 col-md-4 mt-3">
-                <div className="card icard2"><img src={img3} className="card-img-end" alt="A Beautiful flower image" /><div className="card-body">
-                        <h3>{txt[0]}</h3><p>{txt[2]}</p>
-                </div></div>
-            </div>
-            <div className="col-12 col-sm-6 col-md-4 mt-3">
-                <div className="card icard3"><div className="card-body">
+                <div className="card icard3 my-5"><div className="card-body">
                         <h3>{txt[0]}</h3><p>{txt[2]}</p>
                 </div><img src={img1} className="card-img-bottom" alt="A Beautiful flower image" /></div>
             </div>
-            <div className="col-12 col-lg-6 mt-3">
-                <div className="card icard9" style={{backgroundImage: `url(${img2})`}}><div className="card-body">
+            <div className="col-12 col-sm-6 col-md-5 p-5 light">
+                <div className="card crd1 my-5"><div className="card-body">
+                        <h3>{txt[0]}</h3><p>{txt[2]}</p>
+                </div></div>
+                <div className="card card1 my-5"><div className="card-body">
+                        <h3>{txt[0]}</h3><p>{txt[2]}</p>
+                </div></div>
+                <div className="card card2 my-5"><div className="card-body">
+                        <h3>{txt[0]}</h3><p>{txt[2]}</p>
+                </div></div>
+                <div className="card card3 my-5"><div className="card-body">
+                        <h3>{txt[0]}</h3><p>{txt[2]}</p>
+                </div></div>
+                <div className="card card4 my-5"><div className="card-body">
+                        <h3>{txt[0]}</h3><p>{txt[2]}</p>
+                </div></div>
+                <div className="card card5 my-5"><div className="card-body">
+                        <h3>{txt[0]}</h3><p>{txt[2]}</p>
+                </div></div>
+                <div className="card icard1 my-5"><img src={img1} className="card-img-top" alt="A Beautiful flower image" /><div className="card-body">
+                        <h3>{txt[0]}</h3><p>{txt[2]}</p>
+                </div></div>
+                <div className="card icard2 my-5"><img src={img3} className="card-img-end" alt="A Beautiful flower image" /><div className="card-body">
+                        <h3>{txt[0]}</h3><p>{txt[2]}</p>
+                </div></div>
+                <div className="card icard3 my-5"><div className="card-body">
+                        <h3>{txt[0]}</h3><p>{txt[2]}</p>
+                </div><img src={img1} className="card-img-bottom" alt="A Beautiful flower image" /></div>
+            </div>
+            <div className="col-12 col-lg-6 mt-3 light">
+                <div className="card icard4 my-5" style={{backgroundImage: `url(${img2})`}}><div className="card-body">
+                        <h3>{txt[0]}</h3><p>{txt[2]}</p><p>{txt[1]}</p>
+                </div></div>
+            </div>
+            <div className="col-12 col-lg-6 mt-3 dark">
+                <div className="card icard4 my-5" style={{backgroundImage: `url(${img2})`}}><div className="card-body">
                         <h3>{txt[0]}</h3><p>{txt[2]}</p><p>{txt[1]}</p>
                 </div></div>
             </div>
